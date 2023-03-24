@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #game {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #cookie {
+            width: 200px;
+            cursor: pointer;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #cookie.clicked {
+            opacity: 0.5;
+            transform: scale(0.9);
+            transition: all 0.2s ease-in-out;
+        }
+
+        #score {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 20px;
+            color: #ddd;
+        }
+        #Mult {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 20px;
+            color: #ddd;
+        }
+
+        #cps {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 20px;
+            color:#ddd;
+        }
+
+        #upgrades {
+            margin-top: 20px;
+        }
+
+        #auto-clicker {
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #ffb347;
+            border: none;
+            cursor: pointer;
+        }
+
+        #auto-clicker:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+        #rebirth {
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #ffb347;
+            border: none;
+            cursor: pointer;
+        }
+
+        #rebirth:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        #auto-clicker-2 {
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #ffb347;
+            border: none;
+            cursor: pointer;
+        }
+
+        #auto-clicker-2:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('file:///C:/Users/DJ/Desktop/Cookie/Backround.png');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        #bonus-cookie {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 50px;
+            height: 50px;
+            background-image: url('cookie.png');
+            background-size: cover;
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="GameContaner">
+        <div id="game">
+            <div id="cps">Cookies per second: 0</div>
+            <img id="cookie" src="cookie.png" alt="cookie" />
+            <div id="score">Cookies: 0</div>
+            <div id = "Mult">Current Multiplier: 1</div>
+        </div>
+        <div id="upgrades">
+            <button id="auto-clicker">Purchase Cursor (Cost: 10)</button>
+            <button id="auto-clicker-2">Purchase Granny (Cost: 100)</button>
+            <button id = "rebirth">Purchase Rebirth (Cost: 1000)</button>
+        </div>
+        <audio id="click-sound" src="Click.mp3"></audio>
+        <div id="bonus-cookie"></div>
+    </div>
+
+
+    <script src="game.js"></script>
+</body>
+
+</html>
